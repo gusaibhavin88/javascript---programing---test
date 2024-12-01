@@ -1,15 +1,13 @@
-// CLoser
-const closerFunc = () => {
-  let num = 10; // You can assign a value to `num`
-  return () => {
-    num = num + 1;
-    console.log(num); // This function forms a closure over the `num` variable
-  };
-};
+//Find Index
 
-const func = closerFunc();
-func();
-func();
-func();
-func();
-func();
+function findTarget(array, target) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === target) {
+      return i;
+    }
+  }
+  return -1;
+}
+const myArray = [1, 3, 8, 90];
+const ans = findTarget(myArray);
+console.log(ans);
